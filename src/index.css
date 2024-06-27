@@ -1,0 +1,307 @@
+.container {
+  display: flex !important;
+}
+
+.avatarContainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatars {
+  /* width: auto !important; */
+  /* height: auto !important; */
+  object-fit: cover !important;
+  border-radius: 50%;
+}
+
+.extrasmall img {
+  width: 20px;
+  height: 20px;
+}
+
+.small img {
+  width: 24px;
+  height: 24px;
+}
+
+.medium img {
+  width: 32px;
+  height: 32px;
+}
+
+.large img {
+  width: 36px;
+  height: 36px;
+}
+
+.avatarIcon:focus {
+  border: 2px solid #475569;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separated {
+  gap: 1em;
+}
+
+.avatarWrapper {
+  position: relative;
+  transition: 0.3s;
+}
+
+.avatar {
+  position: relative;
+  transition: 0.3s;
+}
+
+.avatar:not(:first-child) {
+  margin-left: -24px;
+}
+
+.avatar:hover {
+  z-index: 1;
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+.avatarName {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #475569;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.avatarName::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid;
+  border-color: #475569 transparent transparent transparent;
+}
+
+.avatar:hover .avatarName {
+  opacity: 1;
+  visibility: visible;
+}
+
+.avatar:hover .avatarName {
+  opacity: 1;
+  visibility: none;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.avatarsDisables {
+  filter: brightness(50%);
+  cursor: not-allowed;
+}
+
+.focusAvtar:focus {
+  border: 2px solid #fff;
+}
+
+.avatarsHover:hover {
+  width: 36px;
+  height: 36px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatarsNames:focus {
+  border: 2px solid #fff;
+}
+
+.avatarsNamesHover:hover {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.avatarsNamesDisables {
+  filter: brightness(50%);
+  cursor: not-allowed;
+}
+
+.avatarsNames {
+  font-family: Arial, sans-serif;
+  object-fit: cover;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarsNames img {
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar .extrasmall {
+  width: 24px;
+  height: 24px;
+  font-size: 8px;
+}
+
+.avatar .small {
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+}
+
+.avatar .medium {
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+}
+
+.avatar .large {
+  width: 60px;
+  height: 60px;
+}
+
+.avatarNameColor {
+  background-color: #475569;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.avatarNameColor:focus {
+  border: 2px solid #475569;
+}
+
+.avatarDefaultColor {
+  background-color: #000;
+  color: #fff;
+}
+
+.avatars img {
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatarNum {
+  border-radius: 50%;
+  display: flex;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: #fff;
+  background-color: #000;
+  padding: 5.5px 7.5px;
+}
+
+.avatarNum:focus {
+  border: 2px solid #475569;
+}
+
+.avatarNumDisable {
+  filter: brightness(50%);
+}
+
+.avatarNum {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarNum span {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.avatarNum {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.avatarNumOverlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.avatarNumOverlay span {
+  position: absolute;
+  z-index: 2;
+}
+
+.avatarNumOverlay .avatars {
+  background-color: #475569;
+  opacity: 0.5;
+}
+
+.last {
+  opacity: 0.6;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer .num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 600;
+}
